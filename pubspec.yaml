@@ -25,3 +25,8 @@ flutter:
 
   assets:
     - assets/img/
+
+  fonts:
+    - family: GasoekOne
+      fonts:
+        - asset: assets/fonts/GasoekOne-Regular.ttf

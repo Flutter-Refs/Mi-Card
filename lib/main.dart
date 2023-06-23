@@ -19,9 +19,19 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: <Widget>[
+              // avatar
               CircleAvatar(
                 radius: 50,
                 foregroundImage: AssetImage('img/avatar.png'),
+              ),
+              // name txt
+              Text(
+                "Yavor Yankov",
+                style: TextStyle(
+                  fontFamily: 'GasoekOne',
+                  fontSize: 40,
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
