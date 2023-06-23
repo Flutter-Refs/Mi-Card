@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // avatar
               CircleAvatar(
@@ -45,23 +46,26 @@ class MyApp extends StatelessWidget {
                     color: Colors.white,
                     letterSpacing: 2),
               ),
+              SizedBox(
+                height: 20,
+                width: 175,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
               // phone number
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 25,
                 ),
-                padding: EdgeInsets.all(10),
-                child: Row(children: <Widget>[
-                  Icon(
+                child: ListTile(
+                  leading: Icon(
                     Icons.phone,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
+                  title: Text(
                     '+44 123 456 789',
                     style: TextStyle(
                       color: Colors.teal,
@@ -69,25 +73,21 @@ class MyApp extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                ]),
+                ),
               ),
               // email address
-              Container(
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 25,
                 ),
-                padding: EdgeInsets.all(10),
-                child: Row(children: <Widget>[
-                  Icon(
+                child: ListTile(
+                  leading: Icon(
                     Icons.email,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
+                  title: Text(
                     'test.email@your.domain.com',
                     style: TextStyle(
                       color: Colors.teal,
@@ -95,8 +95,8 @@ class MyApp extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                ]),
-              )
+                ),
+              ),
             ],
           ),
         ),
